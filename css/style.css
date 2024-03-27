@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(222, 184, 135);
+    margin: 0;
+    padding: 0;
+}
+
+.calculator input[type="button"].backspaceButton {
+    color: #fff;
+    width: 19%;
+    padding: 5px;
+    font-size: 22px;
+    background-color: #e60000;
+    border-color: #e60000;
+}
+.calculator input[type="button"].backspaceButton:hover {
+    background-color: rgba(224, 29, 0, 0.75);
+}
+
+.calculator input[type="button"].asdm {
+    color: #fff;
+    width: 19%;
+    font-size: 22px;
+    background-color: #fa4000;
+    border-color: #fa4000;
+}
+
+.calculator input[type="button"].asdm:hover {
+    background-color: rgba(255, 67, 37, 0.64);
+}
+
+.calculator {
+    max-width: 30%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgb(253, 34, 0);
+    padding: 20px;
+}
+
+
+.calculator input[type="text"] {
+    width: 73%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid rgba(210, 0, 0, 0.65);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.calculator input[type="button"] {
+    width: 19%;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+    border: 1px solid #e01d00;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.calculator input[type="button"]:hover {
+    background-color: rgba(255, 0, 0, 0.52);
+}
+
+.calculator input[type="button"].equals {
+    width: 19%;
+    color: #fff;
+    font-size: 22px;
+    background-color: green;
+    border-color: green;
+}
+.calculator input[type="button"].equals:hover {
+    background-color: rgba(30, 117, 0, 0.63);
+}
+
+
+.calculator input[type="button"].clear {
+    font-size: 22px;
+    background-color: #e60000;
+    color: #fff;
+}
+
+.calculator input[type="button"].clear:hover {
+    background-color: rgba(224, 29, 0, 0.75);
+}
