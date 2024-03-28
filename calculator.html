@@ -10,10 +10,10 @@
 <body>
 <h1 style="text-align: center; color: green">Calculator</h1>
 <div class="calculator">
-    <input type="text" id="display" oninput="validateInput(this)">
 
+    <input type="text" id="display" oninput="validateInput(this)" placeholder="1234567890" onkeypress="handleKeyPress(event)">
     <input type="button"  class="backspaceButton" value="&#9003;" onclick="simulateBackspace()">
-    <br>
+
     <input type="button" value="1" onclick="addToDisplay('1')">
     <input type="button" value="2" onclick="addToDisplay('2')">
     <input type="button" value="3" onclick="addToDisplay('3')">

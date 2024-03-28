@@ -5,7 +5,6 @@ function addToDisplay(value) {
     if (lastCharIsOperator && isOperator) {
         return;
     }
-
     display.value += value;
 }
 
@@ -25,13 +24,18 @@ document.getElementById("display").addEventListener("keydown", function (event) 
 });
 
 function validateInput(input) {
-    input.value = input.value.replace(/[^0-9+\-*/]/g, '');
-    let lastCharIsOperator = input.value.length > 0 && ['/', '*', '-', '+'].includes(input.value.slice(-1));
-    let isOperator = ['/', '*', '-', '+'].includes(value);
-    if (lastCharIsOperator && isOperator) {
-        return;
+    input.value = input.value.replace(/[^0-9+\-*C/]/g, '');
+}
+
+function handleKeyPress(event) {
+    let display = document.getElementById('display');
+    let currentValue = display.value;
+    let lastChar = currentValue.slice(-1);
+    let keyPressed = String.fromCharCode(event.keyCode);
+
+    if (["+", "-", "*", "/"].includes(lastChar) && ["+", "-", "*", "/"].includes(keyPressed)) {
+        display.value = currentValue.slice(0, -1);
     }
-    input.value += value
 }
 
 function clearDisplay() {
@@ -43,10 +47,43 @@ function calculate() {
     if (expression) {
         try {
             document.getElementById('display').value = eval(expression);
+
         } catch (error) {
+            alert("Please input valid data !!!")
             document.getElementById('display').value = '';
         }
     } else {
+        alert("Please input valid data !!!")
+        document.getElementById('display').value = '';
+    }
+
+    if (eval(expression) === Infinity){
+        alert("Infinity value !!!")
+        document.getElementById('display').value = '';
+    }
+
+    if (isNaN(eval(expression))){
+        alert("Not a valid number value !!!")
         document.getElementById('display').value = '';
     }
 }
+
+document.getElementById("display").addEventListener("keydown", function (event) {
+    if (event.key === "=") {
+        event.preventDefault();
+     calculate()
+    }
+});
+document.getElementById("display").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        calculate()
+    }
+});
+
+document.getElementById("display").addEventListener("keydown", function (event) {
+    if (event.key === "c") {
+        event.preventDefault();
+        clearDisplay()
+    }
+});
