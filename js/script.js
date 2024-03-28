@@ -8,6 +8,14 @@ function addToDisplay(value) {
     display.value += value;
 }
 
+document.querySelector('.calculator').addEventListener('click', function (event) {
+    if (event.target.classList.contains("number") || event.target.classList.contains("operator")){
+        addToDisplay(event.target.value)
+    } else if (event.target.classList.contains("equals")){
+        calculate()
+    }
+})
+
 function simulateBackspace() {
     let inputElement = document.getElementById("display");
     let currentValue = inputElement.value;
@@ -53,16 +61,14 @@ function calculate() {
             document.getElementById('display').value = '';
         }
     } else {
-        alert("Please input valid data !!!")
         document.getElementById('display').value = '';
     }
 
     if (eval(expression) === Infinity){
         alert("Infinity value !!!")
         document.getElementById('display').value = '';
-    }
 
-    if (isNaN(eval(expression))){
+    } else if (isNaN(eval(expression))){
         alert("Not a valid number value !!!")
         document.getElementById('display').value = '';
     }
