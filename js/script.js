@@ -20,24 +20,7 @@ $(document).ready(function () {
 
 
     $('#calculate').click(function () {
-        if (display) {
-            try {
-                display.val(eval(display.val()));
-            } catch (error) {
-                alert("Please input valid data !!!")
-                display.val('')
-            }
-        } else {
-            display.val('')
-        }
-        if (isNaN(eval(display.val()))) {
-            alert("Not a valid data value !!!")
-            display.val('')
-        }
-        if (eval(display.val()) === Infinity) {
-            alert("Infinity value !!!")
-            display.val('')
-        }
+        calculate()
     });
 
     function calculate() {
@@ -81,7 +64,7 @@ $(document).ready(function () {
         $('#display').val('');
     }
 
-    $('#display').on('keydown', function(event) {
+    $('#display').on('keydown', function (event) {
         if (event.key === "=" || event.key === "Enter") {
             event.preventDefault();
             calculate();
