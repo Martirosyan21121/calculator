@@ -13,6 +13,8 @@ document.querySelector('.calculator').addEventListener('click', function (event)
         addToDisplay(event.target.value)
     } else if (event.target.classList.contains("equals")){
         calculate()
+    } else if (event.target.classList.contains("clear")){
+        clearDisplay()
     }
 })
 
