@@ -40,7 +40,7 @@ $(document).ready(function () {
             alert("Infinity value !!!");
             $('#display').val('');
         }
-         if (isNaN(eval(expression))) {
+        if (isNaN(eval(expression))) {
             alert("Not a valid number value !!!");
             $('#display').val('');
         }
@@ -50,6 +50,11 @@ $(document).ready(function () {
         let displayVal = display.val()
         display.val(displayVal.substring(0, displayVal.length - 1));
     });
+
+    $('#sqrt').click(function () {
+        let displayVal = display.val()
+        display.val(Math.sqrt(displayVal))
+    })
 
     $('#C').click(function () {
         display.val('')

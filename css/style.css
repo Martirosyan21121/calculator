@@ -19,7 +19,7 @@ body {
 
 .calculator input[type="button"].asdm {
     color: #fff;
-    width: 19%;
+    width: 16%;
     font-size: 22px;
     background-color: #fa4000;
     border-color: #fa4000;
@@ -30,7 +30,7 @@ body {
 }
 
 .calculator {
-    max-width: 30%;
+    max-width: 40%;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 20px;
@@ -51,7 +51,7 @@ body {
 
 
 .calculator input[type="button"] {
-    width: 19%;
+    width: 15%;
     padding: 15px;
     font-size: 20px;
     margin: 10px;
@@ -67,7 +67,7 @@ body {
 }
 
 .calculator input[type="button"].equals {
-    width: 19%;
+    width: 15%;
     color: #fff;
     font-size: 22px;
     background-color: green;
