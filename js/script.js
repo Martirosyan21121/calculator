@@ -60,6 +60,34 @@ $(document).ready(function () {
         }
     })
 
+    $('#sin').click(function () {
+        let displayVal = display.val()
+        display.val(Math.sin(displayVal))
+        if (isNaN(displayVal)){
+            alert("Not a valid number value !!!");
+            $('#display').val('');
+        }
+    })
+
+    $('#cos').click(function () {
+        let displayVal = display.val()
+        display.val(Math.cos(displayVal))
+        if (isNaN(displayVal)){
+            alert("Not a valid number value !!!");
+            $('#display').val('');
+        }
+    })
+
+    $('#tan').click(function () {
+        let displayVal = display.val()
+        display.val(Math.tan(displayVal))
+        if (isNaN(displayVal)){
+            alert("Not a valid number value !!!");
+            $('#display').val('');
+        }
+    })
+
+
     $('#C').click(function () {
         display.val('')
     });
