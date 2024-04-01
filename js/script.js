@@ -54,38 +54,49 @@ $(document).ready(function () {
     $('#sqrt').click(function () {
         let displayVal = display.val()
         display.val(Math.sqrt(displayVal))
-        if (isNaN(displayVal)){
+        if (isNaN(displayVal)) {
             alert("Not a valid number value !!!");
             $('#display').val('');
         }
     })
 
     $('#sin').click(function () {
+        sin()
+    })
+
+    function sin() {
         let displayVal = display.val()
         display.val(Math.sin(displayVal))
-        if (isNaN(displayVal)){
+        if (isNaN(displayVal)) {
             alert("Not a valid number value !!!");
             $('#display').val('');
         }
-    })
+    }
 
     $('#cos').click(function () {
-        let displayVal = display.val()
-        display.val(Math.cos(displayVal))
-        if (isNaN(displayVal)){
-            alert("Not a valid number value !!!");
-            $('#display').val('');
-        }
+        cos()
     })
 
-    $('#tan').click(function () {
+    function cos() {
         let displayVal = display.val()
-        display.val(Math.tan(displayVal))
-        if (isNaN(displayVal)){
+        display.val(Math.cos(displayVal))
+        if (isNaN(displayVal)) {
             alert("Not a valid number value !!!");
             $('#display').val('');
         }
+    }
+
+    $('#tan').click(function () {
+        tan()
     })
+    function tan () {
+        let displayVal = display.val()
+        display.val(Math.tan(displayVal))
+        if (isNaN(displayVal)) {
+            alert("Not a valid number value !!!");
+            $('#display').val('');
+        }
+    }
 
 
     $('#C').click(function () {
@@ -109,6 +120,15 @@ $(document).ready(function () {
         } else if (event.key === "c") {
             event.preventDefault();
             clearDisplay();
+        } else if (event.key === "s") {
+            event.preventDefault();
+            sin()
+        } else if (event.key === "o") {
+            event.preventDefault();
+            cos()
+        }else if (event.key === "t") {
+            event.preventDefault();
+            tan()
         }
     });
 
