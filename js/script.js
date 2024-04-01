@@ -53,7 +53,10 @@ $(document).ready(function () {
 
     $('#sqrt').click(function () {
         let displayVal = display.val()
-        display.val(Math.sqrt(displayVal))
+        if (isNaN(display.val(Math.sqrt(displayVal)))) {
+            alert("Not a valid number value !!!");
+            $('#display').val('');
+        }
     })
 
     $('#C').click(function () {
