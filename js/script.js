@@ -39,7 +39,8 @@ $(document).ready(function () {
         if (eval(expression) === Infinity) {
             alert("Infinity value !!!");
             $('#display').val('');
-        } else if (isNaN(eval(expression))) {
+        }
+         if (isNaN(eval(expression))) {
             alert("Not a valid number value !!!");
             $('#display').val('');
         }
